@@ -1,0 +1,86 @@
+COMANDOS PHP AVANZADO <3
+
+
+
+PROMPT: Ubicacion en la que se encuentra en este momento en el sistema
+///////////////////////////////////////////////////////////
+
+COMANDOS DE SISTEMA OPERTAIVO
+
+
+-pwd (Linux only): Muestra la ubicacion del prompt, en el sistema de directorios del equipo
+
+
+-LS (Linux Only): ---Equivale a el comando " dir " en windows :Muestra el contenido(Arbol de directorio) del prompt
+
+	(carpeta/)(archivo@)(Apps *)
+
+
+-cd mover el prompt a una ubicacion especifica
+	---con " cd .. " te mueves a la carpeta padre
+
+node --version
+
+
+
+npm --version
+
+
+composer create-project laravel/laravel nations 
+
+
+//////////////////////////////////////////////////////
+COMANDOS LARAVEL
+
+php artisan ---->generador laravel
+
+make--->Crear cosas
+	make:model ---------->Crear un Model
+
+
+---------->Cada que se cree un componente debe tener la primer letra mayuscula y debe estar en singular
+
+
+-------------------->Se crea el modelo " Continent "   
+	php artisan make:model Continent
+
+php artisan tinker-------------------------->ingresar a la terminal especifica de php Tinker
+
+use App\Models\Continent
+
+///////////////////////////////////////////////////////////
+
+Metodos de modelos elquent
+
+all()------------->trae todas las instancias de una entidad<<entity>>
+Continent::all()
+
+where(//atributo a comparar ,//operadores de comparacion(SQL) ,//valor a comparar)
+	---------->filtra una busqueda por atributo y valor
+
+Country::where('region_id','=','2')
+
+
+select()-------->permite seleccionar los atributos de la consulta
+
+Country::select('name')->
+get()
+
+//////////////////////////////////////////////////////////
+Eloquent : Metodos extractores
+
+/*Poner unicamente al final de la consulta*/
+
+get()--------------------------->Traer la coleccion de INSTANCIAS, producto de la consulta
+
+Country::where('region_id','=',2)->(invocar metodo en un objeto)
+
+count()------------------------->El numero el numero de instancias producto de la consulta
+
+
+
+
+
+
+
+
