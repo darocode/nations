@@ -66,6 +66,15 @@ select()-------->permite seleccionar los atributos de la consulta
 Country::select('name')->
 get()
 
+Modelo o Instacia :: Metodos de consulta :: Metodo Extractor
+
+Country::wherenull('national_day')->
+... orderby('name','desc')->
+... get()
+
+
+orderby('atributo', 'orden asc o desc')--------->Ordena las instancias por atributo y orden
+
 //////////////////////////////////////////////////////////
 Eloquent : Metodos extractores
 
@@ -78,7 +87,25 @@ Country::where('region_id','=',2)->(invocar metodo en un objeto)
 count()------------------------->El numero el numero de instancias producto de la consulta
 
 
+////////////////////////////////////////////////////////////////
 
+METODOS DE RELACION EN ELOQUENT
+
+
+----Estos metodos se utilizan en los modelos y NO son metodos de consulta
+
+
+hasMany()---Expresa una relacion de uno a muchos
+
+
+hasMany(Modelo a relacionar , 'Clave foranea del modelo a relacionar')
+
+
+MODOS DE RELACION
+	
+	-Modo Coleccion: Trae Datos, No se pueden hacer consultas 
+	-Modo Metodo: Se pueden hacer consultas, pero trae un objeto de relacion
+	
 
 
 

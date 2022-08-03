@@ -13,9 +13,27 @@ class Country extends Model
 
      //clave primaria de la tabla
  
-     protected $primarykey = "country_id";
+     protected $primaryKey = "country_id";
  
      //omitir campos de auditoria
      public $timestaps = false;
     use HasFactory;
+
+    //1. Related Model
+    //2. Pivot table(intermediate table)
+    //3. Foreign key of current model
+    //4. Foreign key of current model
+
+    public function languages(){
+        return $this->belongsToMany(Language::class,'country_languages','country_id','language_id');
+    } 
+
+    public function regions(){
+        //Belongs to method :Parameters
+        //1. Related Model
+        //2. Foreign key of related model in current model
+        
+        return $this->belongsTo(Region::class,'region_id');
+    }
+
 }

@@ -13,11 +13,22 @@ class Continent extends Model
 
     //clave primaria de la tabla
 
-    protected $primarykey = "content_id";
+    protected $primaryKey = "continent_id";
 
 
 
     //omitir campos de auditoria
     public $timestaps = false;
     use HasFactory;
+
+    //Relacion entre continente y sus regiones
+
+    public function regiones(){
+
+        // parameters
+        // 1. Linked model
+        // 2. Foreign key of current model 
+        // into related model Region
+        return $this->hasMany(Region::class,'continent_id');
+    }
 }
