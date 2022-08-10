@@ -87,6 +87,11 @@ Country::where('region_id','=',2)->(invocar metodo en un objeto)
 count()------------------------->El numero el numero de instancias producto de la consulta
 
 
+
+Sum()---------->totaliza el valor de un atributo, para todas las instancias producto de una consulta
+
+Avg()----------> Saca un promedio de un atributo, para todas las instancias producto de una consulta
+
 ////////////////////////////////////////////////////////////////
 
 METODOS DE RELACION EN ELOQUENT
@@ -99,6 +104,10 @@ hasMany()---Expresa una relacion de uno a muchos
 
 
 hasMany(Modelo a relacionar , 'Clave foranea del modelo a relacionar')
+
+hasManyThrought()--------->Caracteriza una relacion 1:M en cascada
+
+
 
 
 MODOS DE RELACION
